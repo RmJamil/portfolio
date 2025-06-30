@@ -34,7 +34,7 @@ const ContactSection = () => {
   return (
     <section className="py-12 bg-blue-300 my-4 rounded-2xl">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+        <h2 className="text-3xl font-bold mb-8 text-[#6A008A]">Contact Me</h2>
         <div className="flex justify-center flex-wrap gap-6">
           {contactLinks.map((contact, index) => (
             <a
