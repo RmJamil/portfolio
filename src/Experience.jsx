@@ -26,7 +26,7 @@ const Experience = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-[#6A008A]">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiences.map((exp, index) => (
-            <div
+            <div data-aos="zoom-in-down"
               key={index}
               className="bg-blue-200 rounded-lg shadow p-6 hover:shadow-md transition duration-300"
             >

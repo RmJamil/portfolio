@@ -25,7 +25,7 @@ const Skills = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-[#6A008A]">Skills & Tools</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <div
+            <div data-aos="flip-right"
               key={index}
               className="flex flex-col items-center justify-center bg-blue-100 rounded-lg shadow p-4 hover:shadow-md transition"
             >

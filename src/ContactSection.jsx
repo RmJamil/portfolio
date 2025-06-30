@@ -37,7 +37,7 @@ const ContactSection = () => {
         <h2 className="text-3xl font-bold mb-8 text-[#6A008A]">Contact Me</h2>
         <div className="flex justify-center flex-wrap gap-6">
           {contactLinks.map((contact, index) => (
-            <a
+            <a data-aos="flip-right"
               key={index}
               href={contact.url}
               target="_blank"

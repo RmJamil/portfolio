@@ -18,7 +18,7 @@ const Navbar = () => {
         <li><a>Blog</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-white lg:font-bold lg:text-3xl"> Mr. Mahmud Jamil</a>
+    <a className=" text-white lg:font-bold lg:text-3xl"> Mr. Mahmud Jamil</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-white font-bold">
@@ -34,17 +34,17 @@ const Navbar = () => {
 
 
 
-<div className="flex  lg:my-8">
+<div className="flex  lg:my-4">
   <div className="grid grid-cols-1 lg:grid-cols-2 rounded-2xl  bg-blue-300 lg:py-16 w-full ">
-    <img
+    <img data-aos="fade-down-right"
       src={pic}
       className="rounded-2xl shadow-2xl text-center lg:h-[50vh] mx-auto border-2 border-[#6A008A] "
     />
-    <div className='flex flex-col justify-center   p-3'>
+    <div  data-aos="fade-down-left" className='flex flex-col justify-center   p-3'>
       <h1 className="text-2xl font-bold py-3">Hi!</h1>
       <h1 className="lg:text-5xl font-bold">I am <span className='text-[#6A008A]'>Mahmud Jamil</span></h1>
       <h1 className="lg:text-3xl font-bold"><span className='text-blue-600'>Web Developer</span></h1>
-      <h1 className="lg:text-xl font-bold mb-4 ">Specialized on MERN Stack web development</h1>
+      <h1 className="lg:text-xl font-bold mb-4 ">Specialist on MERN Stack web development</h1>
     
       <div className=''>
         <button className="btn bg-blue-400 border-none text-blue-700 lg:font-bold  ">Download CV</button>
@@ -56,11 +56,11 @@ const Navbar = () => {
 
 
 
-<div className="hero bg-blue-300 my-4 py-8 rounded-2xl">
+<div className="hero bg-blue-300 my-4 py-4 rounded-2xl">
   <div className=" text-center">
-    <div className="">
+    <div  className="">
       <h1 className="lg:text-4xl font-bold text-[#6A008A] ">About me</h1>
-      <p className="py-6">
+    <div className='py-6'>
         <p className='text-lg font-bold'>I am passionate and detail-oriented Web Developer with 5 years of experience in front-end and back-end web development.</p>
         <p className='text-lg font-bold text-blue-500'>Specialized in:</p>
         <ul>
@@ -72,10 +72,10 @@ const Navbar = () => {
           <li>Responsive design and cross-browser compatibility.</li>
           <li>Performance optimization and SEO best practices.</li>
         </ul>
-     
+     </div>
 <p className='text-lg font-bold'>I always maintain a problem-solving mindset and a strong eye for design and UX.
 Let’s build something great together!</p>
-      </p>
+   
 
     </div>
   </div>

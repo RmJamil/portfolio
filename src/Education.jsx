@@ -26,7 +26,7 @@ const Education = () => {
         <h2 className="text-3xl font-bold text-center text-[#6A008A] mb-8">Educational Qualification</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {education.map((edu, index) => (
-            <div
+            <div  data-aos="flip-up"
               key={index}
               className="bg-blue-200 rounded-lg shadow p-6 hover:shadow-md transition duration-300"
             >

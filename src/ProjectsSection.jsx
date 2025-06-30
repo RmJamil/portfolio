@@ -45,7 +45,8 @@ const ProjectsSection = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-[#6A008A]">My Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {projects.map((project, index) => (
-            <div
+            <div data-aos="fade-up"
+     data-aos-duration="700"
               key={index}
               className="bg-blue-200 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 "
             >

@@ -29,7 +29,7 @@ const MessageForm = () => {
 
   return (
     <section className="py-12 bg-blue-300 my-4 rounded-2xl">
-      <div className="container mx-auto px-4 max-w-xl">
+      <div data-aos="zoom-out-down" className="container mx-auto px-4 max-w-xl">
         <h2 className="text-3xl font-bold text-center mb-6 text-[#6A008A] ">Message Me</h2>
         <form ref={form} onSubmit={sendEmail} className="bg-blue-200 shadow-md rounded-lg p-6 space-y-4">
           <input
