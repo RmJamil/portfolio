@@ -48,7 +48,7 @@ const ProjectsSection = () => {
             <div data-aos="fade-up"
      data-aos-duration="700"
               key={index}
-              className="bg-blue-200 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 "
+              className="bg-blue-200 p-2 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 "
             >
               <img
                 src={project.image}

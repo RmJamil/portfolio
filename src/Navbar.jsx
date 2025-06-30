@@ -4,7 +4,7 @@ import pic from './assets/jamil.JPG'
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-indigo-600 rounded-t-xl shadow-sm p-4">
+            <div className="navbar bg-indigo-600 rounded-t-xl shadow-sm p-4 mb-2">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ const Navbar = () => {
 
 
 <div className="flex  lg:my-4">
-  <div className="grid grid-cols-1 lg:grid-cols-2 rounded-2xl  bg-blue-300 lg:py-16 w-full ">
+  <div className="grid grid-cols-1 lg:grid-cols-2 rounded-2xl p-4  bg-blue-300 lg:py-16 w-full ">
     <img data-aos="fade-down-right"
       src={pic}
       className="rounded-2xl shadow-2xl text-center lg:h-[50vh] mx-auto border-2 border-[#6A008A] "
@@ -56,7 +56,7 @@ const Navbar = () => {
 
 
 
-<div className="hero bg-blue-300 my-4 py-4 rounded-2xl">
+<div className="hero bg-blue-300 my-4 p-4 rounded-2xl">
   <div className=" text-center">
     <div  className="">
       <h1 className="lg:text-4xl font-bold text-[#6A008A] ">About me</h1>
