@@ -1,2 +1,26 @@
 @import "tailwindcss";
 @plugin "daisyui";
+html {
+  scroll-behavior: smooth;
+}
+.active{
+  border-bottom: 1px solid rgb(53, 53, 197);
+}
+
+.dark-mode {
+  background-color: 	black;
+  color: white;
+}
+
+
+.garamound {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bind li{
+  width:400px;
+
+}

@@ -21,18 +21,18 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="py-12 bg-blue-300 my-4 rounded-2xl">
+    <section id='experience' className="py-12  my-6 rounded-2xl">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#6A008A]">Experience</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 ">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiences.map((exp, index) => (
             <div data-aos="zoom-in-down"
               key={index}
-              className="bg-blue-200 rounded-lg shadow p-6 hover:shadow-md transition duration-300"
+              className="border-2 border-blue-500 rounded-lg shadow p-6 hover:shadow-md transition duration-300"
             >
               <h3 className="text-xl font-semibold mb-2">{exp.institute}</h3>
-              <p className="text-gray-600 text-sm mb-1">{exp.date}</p>
-              <p className="text-gray-800 text-base font-medium">{exp.role}</p>
+              <p className=" text-sm mb-1">{exp.date}</p>
+              <p className=" text-base font-medium">{exp.role}</p>
             </div>
           ))}
         </div>

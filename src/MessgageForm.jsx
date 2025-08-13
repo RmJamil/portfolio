@@ -28,10 +28,10 @@ const MessageForm = () => {
   };
 
   return (
-    <section className="py-12 bg-blue-300 my-4 rounded-2xl">
+    <section id='contact' className="py-12  my-6 rounded-2xl">
       <div data-aos="zoom-out-down" className="container mx-auto px-4 max-w-xl">
-        <h2 className="text-3xl font-bold text-center mb-6 text-[#6A008A] ">Message Me</h2>
-        <form ref={form} onSubmit={sendEmail} className="bg-blue-200 shadow-md rounded-lg p-6 space-y-4">
+        <h2 className="text-3xl font-bold text-center mb-6  ">Message Me</h2>
+        <form ref={form} onSubmit={sendEmail} className="border-2 border-blue-500 shadow-md rounded-lg p-6 space-y-4">
           <input
             type="text"
             name="user_name"
@@ -55,7 +55,7 @@ const MessageForm = () => {
           />
           <button
             type="submit"
-            className=" btn bg-blue-400 text-blue-700 font-bold px-6 py-2 rounded hover:bg-[#6C118A] "
+            className=" btn border-2 border-blue-500 font-bold px-6 py-2 rounded hover:bg-blue-500 hover:text-white"
           >
             Send Message
           </button>

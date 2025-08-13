@@ -4,21 +4,30 @@ import Skills from './Skills';
 import ProjectsSection from './ProjectsSection';
 import Experience from './Experience';
 import Education from './Education';
-import ContactSection from './ContactSection';
+
 import MessageForm from './MessgageForm';
 import Footer from './Footer';
+import Banner from './Banner';
+import ContactInfo from './ContactInfo';
 
 const Home = () => {
     return (
-        <div className='w-11/12 mx-auto pt-6'>
-      <Navbar></Navbar>
+        <div className='pt-6'>
+     <div className='top-0 sticky z-7'>
+       <Navbar></Navbar>
+     </div>
+     <div className='w-11/12 mx-auto'>
+      <Banner></Banner>
       <Skills></Skills>
       <ProjectsSection></ProjectsSection>
       <Education></Education>
       <Experience></Experience>
       <MessageForm></MessageForm>
-      <ContactSection></ContactSection>
-      <Footer></Footer>
+      <ContactInfo></ContactInfo>
+   
+    
+     </div>
+       <Footer></Footer>
         </div>
     );
 };

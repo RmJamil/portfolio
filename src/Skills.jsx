@@ -1,41 +1,133 @@
-// Skills.jsx
-import React from 'react';
-import { FaReact, FaNodeJs, FaGithub, FaHtml5, FaCss3Alt, FaBootstrap, FaFigma } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiFirebase, SiTailwindcss, SiExpress } from 'react-icons/si';
-
-const skills = [
-  { name: 'React', icon: <FaReact className="text-blue-500" /> },
-  { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" /> },
-  { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-  { name: 'Express.js', icon: <SiExpress className="text-gray-700" /> },
-  { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
-  { name: 'Firebase', icon: <SiFirebase className="text-yellow-500" /> },
-  { name: 'GitHub', icon: <FaGithub className="text-black" /> },
-  { name: 'Figma', icon: <FaFigma className="text-pink-500" /> },
-  { name: 'HTML5', icon: <FaHtml5 className="text-orange-600" /> },
-  { name: 'CSS3', icon: <FaCss3Alt className="text-blue-600" /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
-  { name: 'Bootstrap', icon: <FaBootstrap className="text-purple-600" /> },
-];
+import React from "react";
+import {
+  FaJs,
+  FaPython,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaGitAlt,
+  FaFigma,
+  FaJava,
+} from "react-icons/fa";
+import {
+  SiCplusplus,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiExpress,
+  SiSpringboot,
+  SiMysql,
+  SiMongodb,
+  SiPostgresql,
+  SiFirebase,
+  SiAdobeillustrator,
+} from "react-icons/si";
+import { DiDotnet } from "react-icons/di"; // For C#
+import { TbApi } from "react-icons/tb";
+import { MdOutlineDesignServices } from "react-icons/md";
 
 const Skills = () => {
+  const skillsData = [
+    {
+      title: "Programming Languages",
+      icon: <FaJava className="text-3xl text-orange-500" />,
+      items: [
+        { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+        { name: "Python", icon: <FaPython className="text-blue-500" /> },
+        { name: "C#", icon: <DiDotnet className="text-purple-500" /> },
+        { name: "C++", icon: <SiCplusplus className="text-blue-600" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
+        {
+          name: "HTML/CSS",
+          icon: (
+            <>
+              <FaHtml5 className="text-orange-500" />{" "}
+              <FaCss3Alt className="text-blue-500" />
+            </>
+          ),
+        },
+      ],
+    },
+    {
+      title: "Frontend Development",
+      icon: <FaReact className="text-3xl text-cyan-400" />,
+      items: [
+        { name: "React", icon: <FaReact className="text-cyan-400" /> },
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+      ],
+    },
+    {
+      title: "Backend Development",
+      icon: <FaNodeJs className="text-3xl text-green-500" />,
+      items: [
+        { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+        { name: "Express.js", icon: <SiExpress /> },
+        { name: "REST APIs", icon: <TbApi /> },
+        { name: "Spring Boot", icon: <SiSpringboot className="text-green-600" /> },
+      ],
+    },
+    {
+      title: "Database",
+      icon: <FaDatabase className="text-3xl text-gray-500" />,
+      items: [
+        { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+        { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+        { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+      ],
+    },
+    {
+      title: "Tools",
+      icon: <FaGitAlt className="text-3xl text-orange-500" />,
+      items: [
+        { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+        { name: "Agile/Scrum", icon: <MdOutlineDesignServices /> },
+      ],
+    },
+    {
+      title: "Design",
+      icon: <FaFigma className="text-3xl text-purple-500" />,
+      items: [
+        { name: "Figma", icon: <FaFigma className="text-purple-500" /> },
+        { name: "Adobe AI", icon: <SiAdobeillustrator className="text-orange-500" /> },
+        { name: "UI/UX Design", icon: <MdOutlineDesignServices /> },
+        { name: "Wireframing & Prototyping", icon: <MdOutlineDesignServices /> },
+      ],
+    },
+  ];
+
   return (
-    <section className="py-12 my-4 bg-blue-300 rounded-2xl">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#6A008A]">Skills & Tools</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <div data-aos="flip-right"
-              key={index}
-              className="flex flex-col items-center justify-center bg-blue-100 rounded-lg shadow p-4 hover:shadow-md transition"
-            >
-              <div className="text-4xl mb-2">{skill.icon}</div>
-              <p className="text-sm font-medium text-center">{skill.name}</p>
+    <div id='skills' className="px-6 py-12  rounded-2xl my-6">
+      <h2 className="text-4xl font-bold text-center mb-12 ">
+        Skills
+      </h2>
+      <div   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {skillsData.map((category, index) => (
+          <div  data-aos="flip-up"
+            key={index}
+            className="border-2 border-blue-500 shadow-md rounded-xl p-6 hover:shadow-lg transition"
+          >
+            <div className="flex items-center gap-3 mb-4">
+            
+              <h3 className="text-xl font-semibold text-blue-600">{category.title}</h3>
             </div>
-          ))}
-        </div>
+            <ul className="space-y-2">
+              {category.items.map((skill, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-center gap-2"
+                >
+                  {skill.icon} <span>{skill.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

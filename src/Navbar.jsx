@@ -1,86 +1,131 @@
-import React from 'react';
-import pic from './assets/jamil.JPG'
+import React, { useEffect, useState } from 'react';
+import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
+import { NavLink } from 'react-router';
+
 
 const Navbar = () => {
-    return (
-        <div>
-            <div className="navbar bg-indigo-600 rounded-t-xl shadow-sm p-4 mb-2">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+  const [activeSection, setActiveSection] = useState('');
+ const [dark, setDark] = useState(true);
+  const sections = ['about', 'skills', 'projects', 'education', 'experience', 'contact'];
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode !== null) {
+      setDark(savedMode === 'true');
+    }
+  }, []);
+
+  // Apply dark mode class & save to localStorage
+  useEffect(() => {
+    if (dark) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', dark);
+  }, [dark]);
+
+  const handleDark = () => {
+    setDark((prev) => !prev);
+  };
+
+
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = '';
+      sections.forEach((section) => {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.getBoundingClientRect().top;
+          if (top <= window.innerHeight / 2 && top >= -el.offsetHeight / 2) {
+            current = section;
+          }
+        }
+      });
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // run once on mount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="navbar bg-blue-500 rounded-t-xl shadow-sm p-4 mb-2 ">
+      {/* Left Side */}
+      <div className="navbar-start">
+        <a className=" lg:font-bold lg:text-3xl">Md. Mahmud Jamil</a>
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Portfolio</a></li>
-  
-        <li><a>Blog</a></li>
-      </ul>
-    </div>
-    <a className=" text-white lg:font-bold lg:text-3xl"> Mr. Mahmud Jamil</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-white font-bold">
-      <li><a>Portfolio</a></li>
- 
-      <li><a>Blog</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end mr-8">
-    <a className="btn bg-indigo-700 border-none p-4 lg:text-xl text-white ">Hire me</a>
-  </div>
-</div>
 
-
-
-<div className="flex  lg:my-4">
-  <div className="grid grid-cols-1 lg:grid-cols-2 rounded-2xl p-4  bg-blue-300 lg:py-16 w-full ">
-    <img data-aos="fade-down-right"
-      src={pic}
-      className="rounded-2xl shadow-2xl text-center lg:h-[50vh] mx-auto border-2 border-[#6A008A] "
-    />
-    <div  data-aos="fade-down-left" className='flex flex-col justify-center   p-3'>
-      <h1 className="text-2xl font-bold py-3">Hi!</h1>
-      <h1 className="lg:text-5xl font-bold">I am <span className='text-[#6A008A]'>Mahmud Jamil</span></h1>
-      <h1 className="lg:text-3xl font-bold"><span className='text-blue-600'>Web Developer</span></h1>
-      <h1 className="lg:text-xl font-bold mb-4 ">Specialist on MERN Stack web development</h1>
-    
-      <div className=''>
-        <button className="btn bg-blue-400 border-none text-blue-700 lg:font-bold  ">Download CV</button>
-      <button className="btn border-2 border-blue-400 bg-blue-300 text-blue-800 lg:font-bold ml-2  ">Contact</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div className="hero bg-blue-300 my-4 p-4 rounded-2xl">
-  <div className=" text-center">
-    <div  className="">
-      <h1 className="lg:text-4xl font-bold text-[#6A008A] ">About me</h1>
-    <div className='py-6'>
-        <p className='text-lg font-bold'>I am passionate and detail-oriented Web Developer with 5 years of experience in front-end and back-end web development.</p>
-        <p className='text-lg font-bold text-blue-500'>Specialized in:</p>
-        <ul>
-          <li className='lg:text-xl'></li>
-          <li></li>
-          <li>Front-end development with HTML, CSS, JavaScript and React.</li>
-          <li>Back-end technologies including Node.js, Express.</li>
-          <li>Modern tools & workflows like Git, Webpack, and REST APIs.</li>
-          <li>Responsive design and cross-browser compatibility.</li>
-          <li>Performance optimization and SEO best practices.</li>
+      {/* Desktop Menu */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1  font-bold space-x-4">
+          {sections.map((section) => (
+            <li key={section}>
+              <button
+                onClick={() => scrollToSection(section)}
+                className={`hover:underline ${
+                  activeSection === section ? 'text-lg p-1 underline' : ''
+                }`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            </li>
+          ))}
         </ul>
-     </div>
-<p className='text-lg font-bold'>I always maintain a problem-solving mindset and a strong eye for design and UX.
-Let’s build something great together!</p>
-   
+      </div>
 
-    </div>
-  </div>
-</div>
+      {/* Right Side */}
+      <div className="navbar-end  ">
+           
+        <p className="text-xl hidden lg:block font-bold ">Web Developer</p>
+         <div className=" justify-center items-center mt-3  h-full mb-2 hidden lg:flex">
+         
+                  {dark ? <MdDarkMode className='ml-4 cursor-pointer p-1 hover:p-0' onClick={handleDark} size={40} /> : <MdOutlineDarkMode className='ml-4 cursor-pointer  p-1 hover:p-0' onClick={handleDark} size={40} />}
+          
+              </div>
+
+          <div className="dropdown-end dropdown bg-blue-500 ">
+            
+          <label tabIndex={0} className="btn btn-ghost bg-blue-500  lg:hidden ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+         
+          <ul
+           tabIndex={0} className="dropdown-content menu bg-blue-400 rounded-box z-1 w-32 shadow-sm"
+          >
+           <li className=''>   
+            {dark ? <MdDarkMode onClick={handleDark} size={50}  /> : <MdOutlineDarkMode onClick={handleDark} size={50} />}
+          </li>
+            <li><button onClick={() => scrollToSection('skills')} className="hover:underline">Skills</button></li>
+            <li><button onClick={() => scrollToSection('projects')} className="hover:underline">Projects</button></li>
+            <li><button onClick={() => scrollToSection('education')} className="hover:underline">Education</button></li>
+            <li><button onClick={() => scrollToSection('experience')} className="hover:underline">Experience</button></li>
+            <li><button onClick={() => scrollToSection('contact')} className="hover:underline">Contact</button></li>
+          </ul>
         </div>
+      </div>
+    </div>
+
+
+
+
     );
 };
 

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Auction Gallery",
+    "techStack": "React.js, Express.js, MongoDB, Tailwind CSS, DaisyUI",
+    "description": "In this project a buyer can bid on a variety of items and seller can post there products.",
+    "liveLink": "https://auction-gallery.surge.sh/",
+    "githubLink": "https://github.com/RmJamil/auctionGallery",
+    "challenges": [
+      "Implementing secure role-based authentication",
+      "Integrating Cloudinary for image uploads",
+      "Maintaining real-time data consistency across multiple components"
+    ],
+    "improvements": [
+      "Add offline mode with IndexedDB",
+      "Implement push notifications for new assignments",
+      "Add detailed analytics dashboard for teachers"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Jeal Hotel Management",
+    "techStack": "Next.js, Node.js, MongoDB, Tailwind CSS",
+    "description": "A hotel room can be booked remotely. A logged in user can book,updaye and cancel available room on a specific date.",
+    "liveLink": "https://hotel-booking-client-b0a32.web.app",
+    "githubLink": "https://github.com/RmJamil/hotel-book",
+    "challenges": [
+      "Integrating payment gateway securely",
+      "Building real-time delivery tracking",
+      "Managing complex cart state across pages"
+    ],
+    "improvements": [
+      "Add AI-based food recommendations",
+      "Implement order history analytics",
+      "Introduce multi-language support"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "JetWork Freelauncing Platform",
+    "techStack": "React.js, Firebase, Tailwind CSS",
+    "description": "A buyer can hire frelauncers on a variety of skills and buyer can post joband freelauncers can apply and bid on jobs posted.",
+    "liveLink": "https://jetwork-d8354.web.app",
+    "githubLink": "https://github.com/RmJamil/freelance-market-client",
+    "challenges": [
+      "Integrating interactive Google Maps API",
+      "Handling collaborative itinerary editing",
+      "Optimizing large image uploads"
+    ],
+    "improvements": [
+      "Add offline trip access",
+      "Integrate weather forecasting",
+      "Include AI-based itinerary suggestions"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Jecoton App Store",
+    "techStack": "Next.js, Express.js, MongoDB, Tailwind CSS",
+    "description": "An user can download app from a variety of apps posted by app developers.",
+    "liveLink": "https://jetwork-d8354.web.app",
+    "githubLink": "https://github.com/RmJamil/app-store",
+    "challenges": [
+      "Building an efficient search and filter system",
+      "Managing authentication and user sessions",
+      "Optimizing database queries for faster load times"
+    ],
+    "improvements": [
+      "Add book recommendation engine",
+      "Implement wishlist and pre-order features",
+      "Integrate audiobook streaming"
+    ]
+  }
+]

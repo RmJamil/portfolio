@@ -4,12 +4,12 @@ import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-indigo-700 text-white py-6 my-4">
+    <footer className="bg-blue-500 text-white py-6  rounded-t-2xl my-8">
       <div className="container mx-auto px-4 text-center space-y-2">
         <p className="text-lg font-medium text-white">
-          Brand your institute with this top developer.
+          Building elegant digital website with a focus on user experience & technical excellence.
         </p>
-        <p className="text-sm flex justify-center items-center gap-1 text-gray-400">
+        <p className="text-sm flex justify-center items-center gap-1 text-indigo-800">
           <FaRegCopyright />
           2025 Md. Mahmud Jamil. All rights reserved.
         </p>
