@@ -12,7 +12,7 @@ import ContactInfo from './ContactInfo';
 
 const Home = () => {
     return (
-        <div className='pt-6'>
+        <div className=''>
      <div className='top-0 sticky z-7'>
        <Navbar></Navbar>
      </div>

@@ -21,8 +21,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id='experience' className="py-12  my-6 rounded-2xl">
-      <div className="container mx-auto px-4">
+    <section id='experience' className="my-8">
+      <div className="">
         <h2 className="text-3xl font-bold text-center mb-8 ">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiences.map((exp, index) => (

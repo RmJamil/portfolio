@@ -6,7 +6,7 @@ const ContactInfo = ({
   whatsapp = "+880 1776263659", // optional, pass empty string or null if none
 }) => {
   return (
-    <section  className=" mx-auto  p-6 rounded-xl shadow-lg flex justify-center items-center ">
+    <section  className=" my-10 shadow-lg flex justify-center items-center ">
      <div>
          <h2 className=" font-bold mb-12 text-3xl">Contact Information</h2>
       

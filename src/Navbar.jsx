@@ -59,7 +59,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar bg-blue-500 rounded-t-xl shadow-sm p-4 mb-2 ">
+    <div className="navbar bg-blue-500 rounded-t-xl shadow-sm px-4 ">
       {/* Left Side */}
       <div className="navbar-start">
         <a className=" lg:font-bold lg:text-3xl">Md. Mahmud Jamil</a>
